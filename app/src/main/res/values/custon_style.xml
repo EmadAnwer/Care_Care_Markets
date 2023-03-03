@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="cornered">
+        <item name="cornerSize">20sp</item>
+    </style>
+
+    <style name="Images_cornered">
+        <item name="cornerSize">50sp</item>
+    </style>
+
+    <style name="corneredPlace">
+        <item name="cornerSize">20sp</item>
+    </style>
+
+
+    <style name="recommended_cornered">
+        <item name="cornerSize">20sp</item>
+    </style>
+
+    <style name="buttonCorneredImage">
+        <item name="cornerSizeBottomRight">70sp</item>
+
+    </style>
+</resources>

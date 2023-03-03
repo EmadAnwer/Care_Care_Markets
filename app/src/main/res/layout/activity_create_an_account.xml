@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:onClick="back"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:srcCompat="@drawable/backarrow" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd"
+        android:text="@string/create_an_account"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="15sp"
+        app:boxCornerRadiusBottomStart="15sp"
+        app:boxCornerRadiusTopEnd="15sp"
+        app:boxCornerRadiusTopStart="15sp"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2sp"
+        app:boxStrokeWidthFocused="2sp"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTintMode="multiply"
+        app:errorEnabled="true"
+
+        app:helperText='@string/name_helper'
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:passwordToggleEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameTextInputField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:inputType="textPersonName"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:requiresFadingEdge="horizontal|vertical"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="15sp"
+        app:boxCornerRadiusBottomStart="15sp"
+        app:boxCornerRadiusTopEnd="15sp"
+        app:boxCornerRadiusTopStart="15sp"
+        app:boxStrokeWidth="2sp"
+        app:boxStrokeWidthFocused="2sp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperText='@string/email_helper'
+        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextField"
+        app:passwordToggleEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailTextInputField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:inputType="text|textEmailAddress"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:requiresFadingEdge="horizontal|vertical"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="15sp"
+        app:boxCornerRadiusBottomStart="15sp"
+        app:boxCornerRadiusTopEnd="15sp"
+        app:boxCornerRadiusTopStart="15sp"
+        app:boxStrokeWidth="2sp"
+        app:boxStrokeWidthFocused="2sp"
+        app:counterEnabled="true"
+        app:errorEnabled="true"
+        app:helperText="@string/password_helper"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextField"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordTextInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:inputType="textPassword"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:requiresFadingEdge="horizontal|vertical"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirmPasswordTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirm_password"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="15sp"
+        app:boxCornerRadiusBottomStart="15sp"
+        app:boxCornerRadiusTopEnd="15sp"
+        app:boxCornerRadiusTopStart="15sp"
+        app:boxStrokeWidth="2sp"
+        app:boxStrokeWidthFocused="2sp"
+        app:counterEnabled="true"
+        app:errorEnabled="true"
+        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextField"
+        app:passwordToggleEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmPasswordTextInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:inputType="textPassword"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:requiresFadingEdge="horizontal|vertical"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="15sp"
+        app:boxCornerRadiusBottomStart="15sp"
+        app:boxCornerRadiusTopEnd="15sp"
+        app:boxCornerRadiusTopStart="15sp"
+        app:boxStrokeWidth="2sp"
+        app:boxStrokeWidthFocused="2sp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTextField"
+        app:passwordToggleEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneTextInputField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:inputType="phone"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:requiresFadingEdge="horizontal|vertical"
+            android:textSize="18sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="create"
+        android:padding="15sp"
+        android:text="@string/create_an_account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:cornerRadius="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextField" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

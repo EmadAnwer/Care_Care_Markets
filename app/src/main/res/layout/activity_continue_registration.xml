@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContinueRegistrationActivity">
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="complete"
+        android:padding="15dp"
+        android:text="@string/complete"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:cornerRadius="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/governoratesSpinner2" />
+
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:onClick="skip"
+        android:padding="15sp"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/completeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completeButton"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd"
+        android:text="@string/complete_your_Profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutSettings"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_photo"
+            style="@style/FabStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="TODO"
+            android:onClick="pickProfileImage" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProfileSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_person"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1sp" />
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address2TextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="15sp"
+        app:boxCornerRadiusBottomStart="15sp"
+        app:boxCornerRadiusTopEnd="15sp"
+        app:boxCornerRadiusTopStart="15sp"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2sp"
+        app:boxStrokeWidthFocused="2sp"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTintMode="multiply"
+        app:errorEnabled="true"
+
+        app:helperText='@string/address_helper'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutSettings"
+        app:passwordToggleEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addressTextInputField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:inputType="textPersonName"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:requiresFadingEdge="horizontal|vertical"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/governoratesSpinner2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:entries="@array/governorates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address2TextField" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

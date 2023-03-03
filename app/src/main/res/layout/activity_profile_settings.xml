@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileSettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:contentDescription="TODO"
+                android:onClick="back"
+                android:paddingTop="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:srcCompat="@drawable/backarrow" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circularstd"
+                android:text="@string/edit_profile_settings"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutSettings"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center">
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_add_photo"
+                    style="@style/FabStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="TODO"
+                    android:onClick="pickProfileImage" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgProfileSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_person"
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1sp" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="15sp"
+                app:boxCornerRadiusBottomStart="15sp"
+                app:boxCornerRadiusTopEnd="15sp"
+                app:boxCornerRadiusTopStart="15sp"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2sp"
+                app:boxStrokeWidthFocused="2sp"
+                app:counterEnabled="false"
+                app:endIconMode="clear_text"
+                app:endIconTintMode="multiply"
+                app:errorEnabled="true"
+
+                app:helperText='@string/name_helper'
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameTextInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:inputType="textPersonName"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:visibility="gone"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="15sp"
+                app:boxCornerRadiusBottomStart="15sp"
+                app:boxCornerRadiusTopEnd="15sp"
+                app:boxCornerRadiusTopStart="15sp"
+                app:boxStrokeWidth="2sp"
+                app:boxStrokeWidthFocused="2sp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperText='@string/email_helper'
+                app:helperTextEnabled="true"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailTextInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:inputType="text|textEmailAddress"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="15sp"
+                app:boxCornerRadiusBottomStart="15sp"
+                app:boxCornerRadiusTopEnd="15sp"
+                app:boxCornerRadiusTopStart="15sp"
+                app:boxStrokeWidth="2sp"
+                app:boxStrokeWidthFocused="2sp"
+                app:endIconMode="clear_text"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneTextInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:inputType="phone"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:textSize="18sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/address2TextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="15sp"
+                app:boxCornerRadiusBottomStart="15sp"
+                app:boxCornerRadiusTopEnd="15sp"
+                app:boxCornerRadiusTopStart="15sp"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2sp"
+                app:boxStrokeWidthFocused="2sp"
+                app:counterEnabled="false"
+                app:endIconMode="clear_text"
+                app:endIconTintMode="multiply"
+                app:errorEnabled="true"
+
+                app:helperText='@string/address_helper'
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addressTextInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:inputType="textPersonName"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:requiresFadingEdge="horizontal|vertical"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/governoratesSpinner4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:entries="@array/governorates" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:onClick="save"
+                android:padding="15sp"
+                android:text="@string/Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

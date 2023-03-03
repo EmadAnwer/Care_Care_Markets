@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="governorates">
+        <item>Alexandria</item>
+        <item>Assiut</item>
+        <item>Aswan</item>
+        <item>Beheira</item>
+        <item>Bani Suef</item>
+        <item>Cairo</item>
+        <item>Daqahliya</item>
+        <item>Damietta</item>
+        <item>Fayyoum</item>
+        <item>Gharbiya</item>
+        <item>Giza</item>
+        <item>Helwan</item>
+        <item>Ismailia</item>
+        <item>Kafr El Sheikh</item>
+        <item>Luxor</item>
+        <item>Marsa Matrouh</item>
+        <item>Minya</item>
+        <item>Monofiya</item>
+        <item>New Valley</item>
+        <item>North Sinai</item>
+        <item>Port Said</item>
+        <item>Qalioubiya</item>
+        <item>Qena</item>
+        <item>Red Sea</item>
+        <item>Sharqiya</item>
+        <item>Sohag</item>
+        <item>South Sinai</item>
+        <item>Suez</item>
+        <item>Tanta</item>
+
+
+
+    </string-array>
+
+    <string-array name="governorates2">
+        <item>Around Egypt</item>
+        <item>Alexandria</item>
+        <item>Assiut</item>
+        <item>Aswan</item>
+        <item>Beheira</item>
+        <item>Bani Suef</item>
+        <item>Cairo</item>
+        <item>Daqahliya</item>
+        <item>Damietta</item>
+        <item>Fayyoum</item>
+        <item>Gharbiya</item>
+        <item>Giza</item>
+        <item>Helwan</item>
+        <item>Ismailia</item>
+        <item>Kafr El Sheikh</item>
+        <item>Luxor</item>
+        <item>Marsa Matrouh</item>
+        <item>Minya</item>
+        <item>Monofiya</item>
+        <item>New Valley</item>
+        <item>North Sinai</item>
+        <item>Port Said</item>
+        <item>Qalioubiya</item>
+        <item>Qena</item>
+        <item>Red Sea</item>
+        <item>Sharqiya</item>
+        <item>Sohag</item>
+        <item>South Sinai</item>
+        <item>Suez</item>
+        <item>Tanta</item>
+
+
+
+    </string-array>
+</resources>

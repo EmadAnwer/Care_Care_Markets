@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10sp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/serviceProviderHomeCoverImageView"
+        android:layout_width="200sp"
+        android:layout_height="100sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/corneredPlace"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <RatingBar
+        android:id="@+id/serviceProviderRatingBar"
+        style="@android:style/Widget.Holo.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/serviceProviderTextView"
+        app:layout_constraintTop_toBottomOf="@+id/serviceProviderTextView" />
+
+    <TextView
+        android:id="@+id/serviceProviderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/serviceProviderHomeCoverImageView"
+        app:layout_constraintTop_toBottomOf="@+id/serviceProviderHomeCoverImageView" />
+
+    <TextView
+        android:id="@+id/serviceProviderReviewsCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(1)"
+        app:layout_constraintStart_toEndOf="@+id/serviceProviderTextView"
+        app:layout_constraintTop_toTopOf="@+id/serviceProviderTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

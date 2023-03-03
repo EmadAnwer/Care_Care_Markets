@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProvidersActivity" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/resultsAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:background="@color/red"
+        android:fitsSystemWindows="true"
+        android:theme="@style/actionBarTheme">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/resultsCollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/black"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:title="@string/service_provider">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/resultsToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/back_arrow">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="14sp"
+                android:paddingBottom="14sp">
+
+                <ImageView
+                    android:id="@+id/phoneImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45sp"
+                    android:layout_weight="1"
+                    android:onClick="navigateToPhone"
+                    app:srcCompat="@drawable/phone" />
+
+                <ImageView
+                    android:id="@+id/emailImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45sp"
+                    android:layout_weight="1"
+                    android:onClick="navigateToEmail"
+                    app:srcCompat="@drawable/email" />
+
+                <ImageView
+                    android:id="@+id/locationImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45sp"
+                    android:layout_weight="1"
+                    android:onClick="navigateToLocation"
+                    app:srcCompat="@drawable/location" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16sp"
+                android:paddingEnd="8sp"
+                android:text="@string/services"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/servicesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="?android:attr/listDivider" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userSPReviewsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="200sp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate_this_sp"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline25"
+                    app:layout_constraintTop_toTopOf="@+id/guideline26" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent=".07" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".05" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".95" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/write_your_experience"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline25"
+                    app:layout_constraintTop_toBottomOf="@+id/reviewsRatingBar" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/reviewsPostTextField"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/experience"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="15sp"
+                    app:boxCornerRadiusBottomStart="15sp"
+                    app:boxCornerRadiusTopEnd="15sp"
+                    app:boxCornerRadiusTopStart="15sp"
+                    app:boxStrokeColor="@color/black"
+                    app:boxStrokeWidth="2sp"
+                    app:boxStrokeWidthFocused="2sp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="250"
+                    app:counterTextColor="@color/red"
+                    app:endIconTint="@color/Background"
+                    app:endIconTintMode="screen"
+                    app:errorEnabled="false"
+                    app:helperText="@string/writeYourExperience"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                    app:layout_constraintStart_toStartOf="@+id/guideline25"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22"
+                    app:passwordToggleEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:inputType="textPersonName"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:requiresFadingEdge="horizontal|vertical"
+                        android:textColorHighlight="@color/Background"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/reviewsButton"
+                    style="@style/Widget.MaterialComponents.TimePicker.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:insetTop="0sp"
+                    android:insetBottom="0sp"
+                    android:onClick="setReview"
+                    android:padding="10sp"
+                    android:text="@string/review"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                    app:layout_constraintTop_toBottomOf="@+id/reviewsPostTextField"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeColor="@color/red"
+                    app:strokeWidth="1sp" />
+
+                <RatingBar
+                    android:id="@+id/reviewsRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                    app:layout_constraintStart_toStartOf="@+id/guideline25"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

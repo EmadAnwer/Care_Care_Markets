@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profileSettingsItem"
+        android:icon="@drawable/edit"
+        android:title="@string/profile_settings" />
+    <!--<item
+        android:id="@+id/userOrdersItem"
+        android:icon="@drawable/booking"
+        android:title="@string/user_orders" />-->
+
+    <item
+        android:id="@+id/languagesItem"
+        android:icon="@drawable/language"
+        android:title="@string/languages">
+        <menu>
+            <item
+                android:id="@+id/languagesItemEN"
+                android:title="@string/english" />
+            <item
+                android:id="@+id/languagesItemAR"
+                android:title="@string/arabic" />
+        </menu>
+    </item>
+
+
+
+    <item
+        android:id="@+id/logoutItem"
+        android:icon="@drawable/logout"
+        android:title="@string/logout" />
+
+
+
+    
+</menu>
